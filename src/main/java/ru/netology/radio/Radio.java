@@ -2,8 +2,16 @@ package ru.netology.radio;
 public class Radio {
     private int radioStationNum;
     private int radioVolum;
+    private int radioStationMaxAmount;
+
+    public Radio() {
+        radioStationMaxAmount = 9;
+    }
+    public Radio(int stationsAmount) {
+        radioStationMaxAmount = stationsAmount - 1;
+    }
     public void next() {
-        if (radioStationNum !=9) {
+        if (radioStationNum !=radioStationMaxAmount) {
             radioStationNum=radioStationNum + 1;
         } else {
             radioStationNum=0;
@@ -13,7 +21,7 @@ public class Radio {
         if (radioStationNum !=0) {
             radioStationNum=radioStationNum - 1;
         } else {
-            radioStationNum=9;
+            radioStationNum=radioStationMaxAmount;
         }
     }
     public void volUp() {
@@ -35,7 +43,7 @@ public class Radio {
         if (radioStationNum < 0) {
             return;
         }
-        if (radioStationNum > 9) {
+        if (radioStationNum > (radioStationMaxAmount)) {
             return;
         }
         this.radioStationNum = radioStationNum;

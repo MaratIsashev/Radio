@@ -164,4 +164,13 @@ public class RadioTest {
         int actual = (radioVolume.getRadioVolum());
         Assertions.assertEquals(expected, actual);
     }
+    @Test
+    public void StationAmountChangedToBiger() {
+        Radio stationNum = new Radio(30);
+        stationNum.setRadioStationNum(21);
+
+        int expected = (21);
+        int actual = (stationNum.getRadioStationNum());
+        Assertions.assertEquals(expected, actual);
+    }
 }

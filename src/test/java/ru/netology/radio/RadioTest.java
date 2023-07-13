@@ -1,4 +1,5 @@
 package ru.netology.radio;
+
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
@@ -13,6 +14,7 @@ public class RadioTest {
         int actual = (radioStation.getRadioStationNum());
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void StationSetOutOfRangeLow() {
         Radio radioStation = new Radio();
@@ -22,6 +24,7 @@ public class RadioTest {
         int actual = (radioStation.getRadioStationNum());
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void StationSet() {
         Radio radioStation = new Radio();
@@ -43,6 +46,7 @@ public class RadioTest {
         int actual = (radioStation.getRadioStationNum());
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void StationNextIsGoingToMax() {
         Radio radioStation = new Radio();
@@ -54,6 +58,7 @@ public class RadioTest {
         int actual = (radioStation.getRadioStationNum());
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void StationNextButAlreadyMax() {
         Radio radioStation = new Radio();
@@ -65,6 +70,7 @@ public class RadioTest {
         int actual = (radioStation.getRadioStationNum());
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void StationPrev() {
         Radio radioStation = new Radio();
@@ -76,6 +82,7 @@ public class RadioTest {
         int actual = (radioStation.getRadioStationNum());
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void StationPrevIsGoingMin() {
         Radio radioStation = new Radio();
@@ -87,6 +94,7 @@ public class RadioTest {
         int actual = (radioStation.getRadioStationNum());
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void StationPrevButAlreadyMin() {
         Radio radioStation = new Radio();
@@ -98,6 +106,7 @@ public class RadioTest {
         int actual = (radioStation.getRadioStationNum());
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void VolumeUp() {
         Radio radioVolume = new Radio();
@@ -109,6 +118,7 @@ public class RadioTest {
         int actual = (radioVolume.getRadioVolum());
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void VolumeUpNextIsMax() {
         Radio radioVolume = new Radio();
@@ -120,6 +130,7 @@ public class RadioTest {
         int actual = (radioVolume.getRadioVolum());
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void VolumeUpAlreadyMax() {
         Radio radioVolume = new Radio();
@@ -131,6 +142,7 @@ public class RadioTest {
         int actual = (radioVolume.getRadioVolum());
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void VolumeDown() {
         Radio radioVolume = new Radio();
@@ -142,6 +154,7 @@ public class RadioTest {
         int actual = (radioVolume.getRadioVolum());
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void VolumeDownButNextIsMin() {
         Radio radioVolume = new Radio();
@@ -153,6 +166,7 @@ public class RadioTest {
         int actual = (radioVolume.getRadioVolum());
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void VolumeDownButAlreadyMin() {
         Radio radioVolume = new Radio();
@@ -164,6 +178,7 @@ public class RadioTest {
         int actual = (radioVolume.getRadioVolum());
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void StationAmountChangedToBiger() {
         Radio stationNum = new Radio(30);
